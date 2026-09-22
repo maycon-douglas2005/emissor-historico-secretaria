@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teste
+
+    </title>
+</head>
+
+<body>
+
+    <input type="file" name="" id="arquivoExcel">
+    <button onclick="carregarExcel()">Carregar Excel</button>
+
+
+    <script src="xlsx.js"></script>
+    <script>
+        function carregarExcel() {
+            const arquivoExcel = document.getElementById('arquivoExcel').files[0];
+
+
+            const reader = new FileReader();
+            // lendo sopa de bytes do arquivoExcel
+            reader.readAsArrayBuffer(arquivoExcel);
+
+
+            // quando acabar de ler
+            reader.onload = function (e) {
+                const bytesConvertidosDoArquivoExcel = new Uint8Array(e.target.result);
+
+
+                // criando tabela na memoria
+                const planilhaExcel = XLSX.read(bytesConvertidosDoArquivoExcel, { type: "array" });
+
+                // pegando primeira aba
+                const abaAluno = planilhaExcel.Sheets["ALUNO"]
+
+                const jsonAluno = XLSX.utils.sheet_to_json(abaAluno);
+
+                console.log("Os dados do aluno em formato JSON:");
+                console.log(jsonAluno);
+            }
+
+
+
+        }
+
+
+
+    </script>
+</body>
+</html>
