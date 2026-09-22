@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #dcdcdc;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.layout {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.painel {
+    width: 250px;
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 15px;
+    align-self: baseline;
+}
+
+.painel h2 {
+    margin-bottom: 15px;
+}
+
+input[type=file] {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.btn {
+    width: 100%;
+    border: none;
+    background: #2f61dc;
+    color: #fff;
+    padding: 10px;
+    margin-top: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn:hover {
+    background: #2048ae;
+}
+
+.documento {
+    width: 560px;
+    min-height: 760px;
+    background: #fff;
+    border: 1px solid #000;
+    padding: 60px 40px;
+
+
+}
+
+.escola {
+    text-align: center;
+}
+
+.escola h2 {
+    font-size: 14px;
+}
+
+.escola p {
+    font-size: 8px;
+    line-height: 1.2;
+}
+
+.titulo {
+    text-align: center;
+    margin-top: 14px;
+    margin-bottom: 12px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.curso {
+    font-size: 8px;
+    margin-bottom: 8px;
+}
+
+.curso div {
+    margin-bottom: 2px;
+}
+
+.dadosAluno {
+    width: 100%;
+    font-size: 8px;
+    margin-bottom: 8px;
+}
+
+.linha {
+    display: grid;
+    grid-template-columns: 90px 150px 150px;
+    margin-bottom: 3px;
+}
+
+.label {
+    font-weight: bold;
+}
+
+.valor {
+    display: block;
+    min-height: 9px;
+}
+
+.lei {
+    border: 1px solid #000;
+    text-align: center;
+    font-size: 8px;
+    font-weight: bold;
+    padding: 2px;
+    margin-bottom: 2px;
+}
+
+.historico {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.historico th,
+.historico td {
+    border: 1px solid #000;
+    font-size: 8px;
+    padding: 2px;
+}
+
+.historico th {
+    text-align: center;
+}
+
+.placeholder td {
+    height: 260px;
+    text-align: center;
+    color: #999;
+    font-style: italic;
+}
+
+.carga {
+    margin-top: 8px;
+    font-size: 8px;
+    font-weight: bold;
+}
+
+@media print {
+    .painel {
+        display: none;
+    }
+
+    body {
+        background: white;
+    }
+
+    .documento {
+        border: none;
+        margin: auto;
+    }
+}
+
+.pagina2 {
+    page-break-before: always;
+
+}
+
+.cert-header {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 70px;
+}
+
+.cert-header h2 {
+    font-size: 14px;
+}
+
+.cert-aluno {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 15px;
+    font-size: 8px;
+    margin-bottom: 12px;
+}
+
+.box-certificado {
+    border: 1px solid #000;
+    margin-bottom: 5px;
+    font-size: 8px;
+}
+
+.titulo-cert {
+    border-bottom: 1px solid #000;
+    text-align: center;
+    font-weight: bold;
+    padding: 2px;
+}
+
+.box-certificado div:last-child {
+    padding: 5px;
+    min-height: 35px;
+}
+
+.data-cert {
+    font-size: 8px;
+    margin-top: 12px;
+}
+
+.assinaturas {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 120px;
+    font-size: 8px;
+    text-align: center;
+}
+
+.assinatura {
+    width: 200px;
+}
+
+.rodape-cert {
+    margin-top: 30px;
+    text-align: right;
+    font-size: 6px;
+}

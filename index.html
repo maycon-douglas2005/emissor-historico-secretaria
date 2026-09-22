@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histórico Escolar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+
+
+<body>
+
+    <div class="layout">
+
+
+
+        <div class="documento">
+
+            <div class="escola">
+                <h2>Colégio Pentágono</h2>
+                <p>Mantido por Associação Educacional Pentágono</p>
+                <p>Autorizado por Portaria MEC</p>
+                <p>Rua Coronel Fernando Prestes, 326</p>
+                <p>Santo André - SP</p>
+                <p>secretaria@pentagono.edu.br</p>
+            </div>
+
+            <div class="titulo">
+                Histórico Escolar
+            </div>
+
+            <div class="curso">
+                <div><b>Curso:</b> <span id="curso"></span></div>
+                <div><b>Titulação:</b> <span id="titulacao"></span></div>
+            </div>
+
+            <div class="dadosAluno">
+
+                <div class="linha">
+                    <div>
+                        <span class="label">CGM:</span>
+                        <span class="valor" id="cgm"></span>
+                    </div>
+
+                    <div>
+                        <span class="label">Estudante:</span>
+                        <span class="valor" id="aluno"></span>
+                    </div>
+
+                    <div>
+                        <span class="label">Data Nascimento:</span>
+                        <span class="valor" id="nascimento"></span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="lei">
+                LEI FEDERAL 9394/96 • DEL CEE 162/18 • IND. CEE 169/18
+            </div>
+
+            <table class="historico">
+
+                <thead>
+                    <tr>
+                        <th width="64%">Componentes Curriculares</th>
+                        <th width="8%">CH</th>
+                        <th width="13%">Resultado</th>
+                        <th width="15%">Ano</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tbDisciplinas">
+
+                    <tr class="placeholder">
+                        <td colspan="4">
+                            Aguardando importação da planilha XLS...
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+            <div class="carga">
+                Carga Horária Total do Curso:
+                <span id="cargaHoraria">0</span>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- PÁGINA 2 -->
+
+    <div class="documento pagina2">
+
+        <div class="cert-header">
+            <h2>Colégio Pentágono</h2>
+        </div>
+
+        <div class="cert-aluno">
+
+            <div>
+                <b>CGM:</b><br>
+                <span id="cgm2"></span>
+            </div>
+
+            <div>
+                <b>Estudante:</b><br>
+                <span id="aluno2"></span>
+            </div>
+
+            <div>
+                <b>RG/UF:</b><br>
+                <span id="rguf2"></span>
+            </div>
+
+        </div>
+
+        <div class="box-certificado">
+
+            <div class="titulo-cert">
+                ESTUDOS REALIZADOS
+            </div>
+
+            <div id="estudos2"></div>
+
+        </div>
+
+        <div class="box-certificado">
+
+            <div class="titulo-cert">
+                OBSERVAÇÕES
+            </div>
+
+            <div id="observacoes2"></div>
+
+        </div>
+
+        <div class="box-certificado">
+
+            <div class="titulo-cert">
+                CERTIFICADO
+            </div>
+
+            <div id="certificado2"></div>
+
+        </div>
+
+        <div class="data-cert">
+            Data:
+            <span id="data2"></span>
+        </div>
+
+        <div class="assinaturas">
+
+            <div class="assinatura">
+                <span id="secretaria2"></span>
+            </div>
+
+            <div class="assinatura">
+                <span id="diretora2"></span>
+            </div>
+
+        </div>
+
+        <div class="rodape-cert">
+            Feito por: <span id="responsavel2"></span><br>
+            Conferido por: <span id="conferido2"></span>
+        </div>
+
+    </div>
+
+    <!-- PAINEL IMPORTAÇÃO-->
+    <div class="painel">
+
+        <h2>Importação XLS</h2>
+
+        <input type="file" id="arquivoExcel" <input type="file" id="arquivoExcel"
+            accept=".xlsx,.xls,application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet">
+
+        <button class="btn" onclick="carregarExcel()">
+            Carregar Excel
+        </button>
+
+        <button class="btn" onclick="window.print()">
+            Imprimir
+        </button>
+
+    </div>
+
+
+</body>
+<!-- Biblioteca XLSX -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<script src="script.js"></script>
+
+</html>
